@@ -12,8 +12,11 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 
 
-const TopPlay = () => (
-  <div>TopPlay</div>
-);
+const TopPlay = () => {
+  const dispatch = useDispatch();
+  const { activeSone, isPlaying } = useSelector((state) => state.player);
+  const { data } = useGetTopChartsQuery();
+  const divRef = useRef(null);
+};
 
 export default TopPlay;
